@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>main</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<svg style="display: none;">
+    <symbol id="inst" viewBox="0 0 511 511.9">
+        <g><path xmlns="http://www.w3.org/2000/svg" d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0" data-original="#000000" class=""></path><path xmlns="http://www.w3.org/2000/svg" d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0" data-original="#000000" class=""></path>
+        </g>
+    </symbol>
+    <symbol id="vk" viewBox="0 0 24 24">
+        <g><path xmlns="http://www.w3.org/2000/svg" d="m12.145 19.5c3.472 0 2.234-2.198 2.502-2.83-.004-.472-.008-.926.008-1.202.22.062.739.325 1.811 1.367 1.655 1.67 2.078 2.665 3.415 2.665h2.461c.78 0 1.186-.323 1.389-.594.196-.262.388-.722.178-1.438-.549-1.724-3.751-4.701-3.95-5.015.03-.058.078-.135.103-.175h-.002c.632-.835 3.044-4.449 3.399-5.895.001-.002.002-.005.002-.008.192-.66.016-1.088-.166-1.33-.274-.362-.71-.545-1.299-.545h-2.461c-.824 0-1.449.415-1.765 1.172-.529 1.345-2.015 4.111-3.129 5.09-.034-1.387-.011-2.446.007-3.233.036-1.535.152-3.029-1.441-3.029h-3.868c-.998 0-1.953 1.09-.919 2.384.904 1.134.325 1.766.52 4.912-.76-.815-2.112-3.016-3.068-5.829-.268-.761-.674-1.466-1.817-1.466h-2.461c-.998 0-1.594.544-1.594 1.455 0 2.046 4.529 13.544 12.145 13.544zm-8.09-13.499c.217 0 .239 0 .4.457.979 2.883 3.175 7.149 4.779 7.149 1.205 0 1.205-1.235 1.205-1.7l-.001-3.702c-.066-1.225-.512-1.835-.805-2.205l3.508.004c.002.017-.02 4.095.01 5.083 0 1.403 1.114 2.207 2.853.447 1.835-2.071 3.104-5.167 3.155-5.293.075-.18.14-.241.376-.241h2.461.01c-.001.003-.001.006-.002.009-.225 1.05-2.446 4.396-3.189 5.435-.012.016-.023.033-.034.05-.327.534-.593 1.124.045 1.954h.001c.058.07.209.234.429.462.684.706 3.03 3.12 3.238 4.08-.138.022-.288.006-2.613.011-.495 0-.882-.74-2.359-2.23-1.328-1.292-2.19-1.82-2.975-1.82-1.524 0-1.413 1.237-1.399 2.733.005 1.622-.005 1.109.006 1.211-.089.035-.344.105-1.009.105-6.345 0-10.477-10.071-10.636-11.996.055-.005.812-.002 2.546-.003z" data-original="#000000" class=""></path>
+        </g>
+    </symbol>
+    <symbol id="email" viewBox="0 0 512 512">
+        <g>
+		<path d="M467,76H45C20.137,76,0,96.262,0,121v270c0,24.885,20.285,45,45,45h422c24.655,0,45-20.03,45-45V121    C512,96.306,491.943,76,467,76z M460.698,106c-9.194,9.145-167.415,166.533-172.878,171.967c-8.5,8.5-19.8,13.18-31.82,13.18    s-23.32-4.681-31.848-13.208C220.478,274.284,64.003,118.634,51.302,106H460.698z M30,384.894V127.125L159.638,256.08L30,384.894z     M51.321,406l129.587-128.763l22.059,21.943c14.166,14.166,33,21.967,53.033,21.967c20.033,0,38.867-7.801,53.005-21.939    l22.087-21.971L460.679,406H51.321z M482,384.894L352.362,256.08L482,127.125V384.894z" data-original="#000000"></path>
+        </g>
+    </symbol>
+</svg>
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <h2>ECLIPSE</h2>
+            </div>
+            <nav class="nav">
+                <a class="nav__link" href="site1.html">ГЛАВНАЯ</a>
+                <a class="nav__link" href="site2.html">О НАС</a>
+                <a class="nav__link" href="site3.html">МЕНЮ</a>
+                <a class="nav__link" href="site4.html">КОНТАКТЫ</a>
+                <a class="nav__link" href="site5.html">СОБЫТИЯ</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="banner">
+    <div class="container">
+        <div class="banner__inner">
+            <h1 class="banner__title">ECLIPSE - THE TWILIGHT CAFE</h1>
+            <h2 class="banner__subtitle">"Раньше я мало думала о смерти... но, по-моему, отдать жизнь за любимого человека — не худшая смерть!" © Белла Свон</h2>
+            <a class="btnn btnn-hov" href="site2.html">о нас</a>
+            <a class="btnn btnn-hov" href="site3.html">меню</a>
+        </div>
+    </div>
+</section>
+
+<div class="newsall">
+    <section class="aboutus1">
+        <div class="aboutuss1">
+            <h3>НОВОСТИ</h3>
+            <p>Следите за нашими событиями!</p>
+        </div></section>
+
+    <div class="news">
+        <div class="container">
+            <div class="news_slider" id="newsSlider">
+                <div class="slick-item">
+                    <div class="news_item">
+                        <div class="news_photo">
+                            <img class="news_img" src="alise.jpg">
+                        </div>
+                        <div class="news_content">
+                            <div class="news_text">Скоро новое мероприятие! Не пропустите!</div>
+                            <a class="btn btn-hov" href="site5.html">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slick-item">
+                    <div class="news_item">
+                        <div class="news_photo">
+                            <img class="news_img" src="1.jpg">
+                        </div>
+                        <div class="news_content">
+                            <div class="news_text">У нас теперь есть вегетарианское меню!</div>
+                            <a class="btn btn-hov" href="site3.html">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="aboutus">
+    <div class="aboutuss">
+        <h3>Немного нашей атмосферы:</h3></div></section>
+
+<div class="works">
+    <div class="works_item">
+        <img class="works_photo" src="bel.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это Белла</div>
+            <div class="works_text">Она улыбается, когда видит, что у нас много посетителей</div>
+        </div>
+    </div>
+     <div class="works_item">
+        <img class="works_photo" src="forks.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это указатель города Форкс</div>
+            <div class="works_text">В него переехала Белла</div>
+        </div>
+    </div>
+     <div class="works_item">
+        <img class="works_photo" src="car.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это машина Беллы</div>
+            <div class="works_text">На ней она ездит на работу в наше кафе</div>
+        </div>
+    </div>
+     <div class="works_item">
+        <img class="works_photo" src="bel1.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это снова Белла</div>
+            <div class="works_text">Она отдыхает после рабочего дня и читает нашу почту</div>
+        </div>
+    </div>
+     <div class="works_item">
+        <img class="works_photo" src="30.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это школа в Форкс</div>
+            <div class="works_text">Там училась Белла до работы в нашем кафе</div>
+        </div>
+    </div>
+     <div class="works_item">
+        <img class="works_photo" src="32.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это Чарли и Белла</div>
+            <div class="works_text">Чарли провожает Беллу утром на работу</div>
+        </div>
+    </div>
+     <div class="works_item">
+        <img class="works_photo" src="31.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это Эдвард Каллен</div>
+            <div class="works_text">Он заехал за Беллой чтобы отвезти её в нвше кафе</div>
+        </div>
+    </div>
+     <div class="works_item">
+        <img class="works_photo" src="29.jpg" alt="">
+        <div class="works_content">
+            <div class="works_title">Это Эдвард и Белла</div>
+            <div class="works_text">Они отдыхают в нашем замечательном кафе</div>
+        </div>
+    </div>
+</div>
+
+<div class="welcome">
+    <div class="welcomee">
+        <h3>Спасибо, что посетили наш сайт! Приглашаем к нам в кафе</h3>
+        <p>Насладитесь атмосферой сумерек. С любовью, команда ECLIPSE</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer_inner">
+            <div class="footer_block">
+                <h4 class="footer_title">МЕСТОНАХОЖДЕНИЕ</h4>
+                <address class="footer_address">
+                    <p>просп. Ленина 164/47</p>
+                    <p>Москва, Россия</p>
+                </address>
+            </div>
+             <div class="footer_block">
+                 <h4 class="footer_title">СОЦСЕТИ</h4>
+                 <div class="social">
+                     <a class="social_item" href="#" target="_blank">
+                         <svg class="social_icon">
+                             <use xlink:href="#inst"></use>
+                         </svg>
+                     </a>
+                     <a class="social_item" href="#" target="_blank">
+                         <svg class="social_icon">
+                             <use xlink:href="#vk"></use>
+                         </svg>
+                     </a>
+                     <a class="social_item" href="#" target="_blank">
+                         <svg class="social_icon">
+                             <use xlink:href="#email"></use>
+                         </svg>
+                     </a>
+                </div>
+             </div>
+            <div class="footer_block">
+                <h4 class="footer_title">КАК СВЯЗАТЬСЯ</h4>
+                <div class="footer_text">
+                    <p>ТЕЛЕФОН: +88888888888</p>
+                    <p>ПОЧТА: eclipse@gmail.com</p>
+                </div>
+            </div>
+            <div class="privpol">
+                <a class="priv" href="site6.html">ПРАВОВАЯ ИНФОРМАЦИЯ</a>
+            </div>
+
+            </div>
+        </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="copyright_text">
+                <div>Copyright © 2022 Eclipse. All rights reserved</div>
+                <div>Made by <span>Жеребцова С. 11Т2</span></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="news1.js"></script>
+
+</body>
+</html>
